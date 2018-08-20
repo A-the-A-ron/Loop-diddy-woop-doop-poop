@@ -22,9 +22,22 @@ namespace ConsoleApp1
                     switch (case20)
                     {
                         case "1":
-
-                            Console.WriteLine("Insert input");
-                            string choice = Console.ReadLine();
+                            string safety = "";
+                            int first;
+                            do
+                            {
+                                Console.WriteLine("Insert input");
+                                
+                                if (!Int32.TryParse(Console.ReadLine(), out first))
+                                {
+                                    Console.WriteLine("retry input");
+                                    safety = "yes";
+                                }
+                                else
+                                {
+                                    safety = "no";
+                                }
+                            } while (safety == "yes");
                             string caseSwitch = "loop";
                             do
                             {
@@ -32,7 +45,7 @@ namespace ConsoleApp1
                                 caseSwitch = Console.ReadLine();
 
 
-                                int first = Convert.ToInt32(choice);
+                                ;
                                 switch (caseSwitch)
                                 {
 
@@ -106,8 +119,19 @@ namespace ConsoleApp1
                             } while (caseSwitch != "for" && caseSwitch != "while" && caseSwitch != "do");
                             break;
                         case "2":
-                            Console.WriteLine("Insert input");
-                            string Newchoice = Console.ReadLine();
+                            string safer = "";
+                            int second;
+                            do
+                            {
+                                Console.WriteLine("Insert input");
+
+                                if (!Int32.TryParse(Console.ReadLine(), out second))
+                                {
+                                    Console.WriteLine("retry input");
+                                    safer = "yes";
+                                }
+                                else { safer = "no"; }
+                            } while (safer == "yes");
                             string caseNew = "loop";
                             do
                             {
@@ -115,7 +139,7 @@ namespace ConsoleApp1
                                 caseNew = Console.ReadLine();
 
 
-                                int second = Convert.ToInt32(Newchoice);
+                                
                                 switch (caseNew)
                                 {
                                     case "for":
@@ -167,15 +191,26 @@ namespace ConsoleApp1
 
                             break;
                         case "3":
-                            Console.WriteLine("Insert input");
-                            string choiceThird = Console.ReadLine();
+                            string safest = "";
+                            int third;
+                            do
+                            {
+                                Console.WriteLine("Insert input");
+
+                                if (!Int32.TryParse(Console.ReadLine(), out third))
+                                {
+                                    Console.WriteLine("retry input");
+                                    safest = "yes";
+                                }
+                                else { safest = "no"; }
+                            } while (safest == "yes");
                             string caseFinal = "loop";
                             do
                             {
                                 Console.WriteLine("What loop?");
                                 caseFinal = Console.ReadLine();
 
-                                int third = Convert.ToInt32(choiceThird);
+                                
                                 switch (caseFinal)
                                 {
                                     case "for":
@@ -242,5 +277,8 @@ namespace ConsoleApp1
 
             }
         }
+
+        
+
     }
 }
